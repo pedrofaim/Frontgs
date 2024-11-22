@@ -1,13 +1,23 @@
-// Variáveis de cor e fonte
-$cor-primaria: #007bff; // Azul do cabeçalho e rodapé
-$cor-secundaria: #28a745; // Verde de fundo
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;700&family=DM+Serif+Text&family=Funnel+Sans:wght@400;700&display=swap');
+$cor-primaria: #007bff;
+$cor-secundaria: #28a745;
 $fonte-primaria: 'Geist Mono',
 monospace;
-// Estilos gerais
+$fonte-titulo: 'DM Serif Text',
+serif;
+$fonte-cabecalho: 'Funnel Sans',
+sans-serif;
 body {
     font-family: $fonte-primaria;
     background-color: $cor-secundaria;
     color: #28a745;
+}
+
+header {
+    font-family: $fonte-cabecalho;
+    h1 {
+        font-family: $fonte-titulo;
+    }
 }
 
 header,
@@ -23,13 +33,12 @@ section {
     padding: 50px 0;
 }
 
-// Estilo para a seção de formulário (Contato)
 #contato {
-    background-color: lighten($cor-secundaria, 10%); // Verde claro para a seção de formulário
+    background-color: lighten($cor-secundaria, 10%);
     color: white;
-    padding: 60px 0; // Ajuste de padding para melhorar a aparência
+    padding: 60px 0;
     form {
-        background-color: darken($cor-secundaria, 5%); // Fundo mais escuro para o formulário
+        background-color: darken($cor-secundaria, 5%);
         padding: 30px;
         border-radius: 8px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -48,7 +57,6 @@ section {
     }
 }
 
-// Media query (Mobile First)
 @media (min-width: 768px) {
     .card {
         transition: transform 0.3s;
